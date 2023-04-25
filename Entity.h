@@ -11,7 +11,7 @@ public:
     void randomizeName(){
         name = RandomName::generate();
     }
-    void initMatch(){
+    void initRound(){
         sum = 0;
         holding = false;
     }

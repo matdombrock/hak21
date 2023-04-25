@@ -12,7 +12,7 @@ public:
         Util::alert("Welcome to hak21");
 
         getPlayerName();
-        playMatch();
+        playRound();
     }
 private:
     void getPlayerName(){
@@ -61,9 +61,9 @@ private:
         Util::clearScreen();
         return cmd;
     }
-    void playMatch(){
-        player.initMatch();
-        enemy.initMatch();
+    void playRound(){
+        player.initRound();
+        enemy.initRound();
         while(true){
             if(player.sum >= player.burst){break;}
             if(enemy.sum >= enemy.burst){break;}
@@ -147,7 +147,7 @@ private:
         combatStatus();
         Util::readLine("Any key to continue...");
         Util::clearScreen();
-        playMatch();
+        playRound();
     }
     Dice dice;
     Entity player;
